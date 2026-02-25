@@ -1,0 +1,27 @@
+{
+  "name": "week-7",
+  "version": "1.0.0",
+  "description": "Mentor repository for reviewing Week 7 homework submissions from the HackYourFuture Core Program. Trainees each build a **School Management CLI** — a Node.js command-line application that manages trainees and courses through a REPL interface.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test:e2e": "vitest run --config tests/e2e/vitest.config.js tests/e2e/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remarcmij/core-week-7-review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/remarcmij/core-week-7-review/issues"
+  },
+  "homepage": "https://github.com/remarcmij/core-week-7-review#readme",
+  "devDependencies": {
+    "vitest": "^4.0.18"
+  }
+}

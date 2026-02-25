@@ -1,0 +1,5 @@
+[
+  { "id": 20001, "name": "JavaScript", "startDate": "2026-03-01", "participants": [] },
+  { "id": 20002, "name": "Python", "startDate": "2026-06-15", "participants": [10001] },
+  { "id": 20003, "name": "React", "startDate": "2026-01-10", "participants": [] }
+]
