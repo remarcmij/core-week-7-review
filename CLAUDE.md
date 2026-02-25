@@ -107,8 +107,41 @@ When reviewing a trainee's submission, evaluate against these criteria:
 - Be specific and actionable: explain *what* to fix, *why* it matters, and *how* to approach it.
 - Avoid being patronizing. Treat them as a developer receiving a professional code review.
 
+### AI-Generated Code Detection
+
+The assignment explicitly forbids AI-generated code. This is a **mandatory** part of every review — you must actively check for AI usage and include your findings in the review. Look for the following signals:
+
+#### Structural signals
+- **Suspiciously complete and polished code** — every edge case handled, every error message perfect, code reads like a tutorial solution rather than a student's iterative work.
+- **Uniformly high quality across all files** — no weak spots, no inconsistencies, no signs of learning or experimentation. Real student code has uneven quality.
+- **Over-engineering** — abstraction layers, helper utilities, design patterns (factory functions, strategy pattern, etc.) that are far beyond what the assignment requires or what a week-7 student would know.
+- **Defensive programming beyond the spec** — input sanitization, type checking, or error handling for scenarios not mentioned in `COMMAND_SPEC.md` that a student wouldn't think to add.
+
+#### Style signals
+- **Verbose JSDoc comments on every function** — especially with `@param` / `@returns` tags, perfectly formatted. Students at this level rarely write JSDoc unprompted.
+- **Overly descriptive variable names** — e.g. `traineeToBeDeleted`, `formattedCourseOutputString`, `existingTraineeIndex`. Students tend toward shorter, simpler names.
+- **Formulaic code comments** — comments that narrate every step ("// Check if trainee exists", "// Return error if not found", "// Save updated data"). Real students either don't comment or comment inconsistently.
+- **Consistent coding patterns throughout** — the exact same error handling pattern, the exact same data access pattern in every function, as if generated from a template.
+
+#### Content signals
+- **Perfect spec compliance on first implementation** — every error message matches the spec word-for-word, every edge case is covered, with no evidence of iteration or debugging in git history.
+- **Features or validations not in the spec** — e.g. email validation, phone number formatting, date range validation beyond what `COMMAND_SPEC.md` requires.
+- **Sophisticated regex or data manipulation** — techniques a week-7 student is unlikely to know (e.g. complex regex, reduce patterns, advanced array methods chained together).
+- **Boilerplate README, CHANGELOG, or documentation files** that weren't requested.
+
+#### Git history signals
+- **Very few commits with large, complete chunks of code** — suggests code was generated and pasted rather than built incrementally.
+- **Commit messages that are too perfect** — e.g. "feat: implement trainee CRUD operations with full validation" using conventional commit format that students haven't been taught.
+- **No evidence of mistakes or corrections** — real development involves trial-and-error; a clean history with no fix-up commits is suspicious.
+
+#### How to report AI suspicion
+- If you find strong signals, include a dedicated **"AI Usage Concern"** section in the review.
+- Be specific: cite exact code snippets, patterns, or git history evidence.
+- Rate the concern level: **low** (a few signals, could be a strong student), **medium** (multiple signals across files), or **high** (overwhelming evidence).
+- Do not accuse — state observations factually: "This code shows several patterns commonly associated with AI generation" rather than "You used ChatGPT."
+- Still provide the full technical review regardless of AI suspicion — the feedback is valuable either way.
+
 ### Important
-- The assignment explicitly forbids AI-generated code. Flag any code that appears suspiciously sophisticated, overly templated, or inconsistent with the trainee's apparent skill level.
 - Focus feedback on helping trainees learn. Be specific about what to improve and why.
 - Ignore `claude-code-pr-review-setup.md` and `e2e-test-harness-plan.md` if present — these are internal setup documents, not part of any trainee submission.
 
