@@ -45,6 +45,20 @@ Create `.github/workflows/claude-review.yml` in the template repo (see examples 
 
 Note: Writing a `REVIEW.md` to the trainee's fork branch is possible but more complex with `pull_request_target` (it requires explicitly checking out the fork's head ref). PR comments are the simplest and most natural approach for this scenario.
 
+## For Mentors: How to Trigger a Review
+
+Once the admin setup is complete, any mentor with write access to the template repo can trigger a review:
+
+1. Open the trainee's PR on GitHub.
+2. Leave a comment containing `@claude`. For example:
+   - `@claude review this`
+   - `@claude please review the error handling`
+   - `@claude check if the REPL loop matches the spec`
+3. Wait for Claude to respond (typically 1-2 minutes). The review appears as one or more PR comments.
+4. You can ask follow-up questions by posting another comment with `@claude`.
+
+**No API key, CLI tools, or special setup needed on the mentor's side** — just the ability to comment on PRs.
+
 ## Workflow Examples
 
 ### Auto-Review Every Trainee PR
