@@ -31,6 +31,23 @@ Trainees build a command-line application that manages **trainees** and **course
 - `vitest` for testing
 - `prettier` for formatting
 
+## Starter Template
+
+The starter template is in `starter-template/school-manager-template/`. Students use this as the base to create their own repo. Key details:
+
+- **All function bodies are empty stubs** with `// TODO` comments — students implement all logic from scratch.
+- **No runtime dependencies included** — only `prettier` and `vitest` as devDependencies. Students must add `prompt-sync` and `chalk` to `package.json` themselves.
+- **`src/index.js`** only imports `parseCommand` and prints "Hello world" — no REPL loop, no prompt-sync, no chalk.
+- **`src/command-parser.js`** exports `parseCommand(userInput)` as an empty stub.
+- **`src/traineeCommands.js`** has stubs: `addTrainee`, `updateTrainee`, `deleteTrainee`, `fetchTrainee`, `fetchAllTrainees`, and exports `handleTraineeCommand(subcommand, args)`.
+- **`src/courseCommands.js`** has stubs: `addCourse`, `updateCourse`, `deleteCourse`, `joinCourse`, `leaveCourse`, `getCourse`, `getAllCourses`, and exports `handleCourseCommand(subcommand, args)`.
+- **`src/storage.js`** defines file paths `'./data/trainees.json'` and `'./data/courses.json'` (lowercase) and exports stubs: `loadTraineeData`, `saveTraineeData`, `loadCourseData`, `saveCourseData`.
+- **`data/Courses.json`** has a capital "C" filename (mismatch with the lowercase path in `storage.js`) and contains a typo: `"startDate": "20226-02-01"`. Both of these are template issues — do NOT blame trainees for inheriting them.
+- **`data/trainees.json`** has 2 sample trainees (John Doe, Jane Smith).
+- **`tests/example.test.js`** has a single placeholder test (`1 + 2 = 3`).
+
+When reviewing, compare the trainee's code against these stubs to understand what they added vs. what was provided. Any functions, helpers, or architectural patterns not in the template are the trainee's own work (or potentially AI-generated).
+
 ## Project Structure (per trainee)
 
 ```
