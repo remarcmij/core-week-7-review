@@ -110,3 +110,4 @@ When reviewing a trainee's submission, evaluate against these criteria:
 ### Important
 - The assignment explicitly forbids AI-generated code. Flag any code that appears suspiciously sophisticated, overly templated, or inconsistent with the trainee's apparent skill level.
 - Focus feedback on helping trainees learn. Be specific about what to improve and why.
+- Ignore `claude-code-pr-review-setup.md` if present — it is an internal setup document, not part of any trainee submission.
