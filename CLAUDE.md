@@ -33,7 +33,7 @@ Trainees build a command-line application that manages **trainees** and **course
 
 ## Starter Template
 
-The starter template is in `starter-template/school-manager-template/`. Students use this as the base to create their own repo. Key details:
+The starter template is at https://github.com/HackYourFuture/school-manager-template. When reviewing, fetch the template from that repo to compare against the trainee's code. Key details:
 
 - **All function bodies are empty stubs** with `// TODO` comments — students implement all logic from scratch.
 - **No runtime dependencies included** — only `prettier` and `vitest` as devDependencies. Students must add `prompt-sync` and `chalk` to `package.json` themselves.
