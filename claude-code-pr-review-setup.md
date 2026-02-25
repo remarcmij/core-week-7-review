@@ -71,6 +71,11 @@ jobs:
 
       - uses: anthropics/claude-code-action@v1
         with:
+          prompt: |
+            Review the ENTIRE codebase, not just the PR diff. This PR
+            represents a trainee's complete project submission. Read and
+            evaluate all source files in src/, tests/, and data/. Follow
+            the review guidelines in CLAUDE.md.
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: "--max-turns 5"
 ```
@@ -79,6 +84,7 @@ Key details:
 - `pull_request_target` gives the workflow access to the base repo's secrets
 - `ref: ${{ github.event.pull_request.head.sha }}` checks out the **trainee's code** (the fork's PR branch), not the base branch
 - Explicit `permissions` follow the principle of least privilege
+- The `prompt` tells Claude to review the full codebase, not just the diff — since each PR is a complete project submission
 
 ### Auto-Review + On-Demand `@claude` Mentions
 
@@ -112,6 +118,11 @@ jobs:
 
       - uses: anthropics/claude-code-action@v1
         with:
+          prompt: |
+            Review the ENTIRE codebase, not just the PR diff. This PR
+            represents a trainee's complete project submission. Read and
+            evaluate all source files in src/, tests/, and data/. Follow
+            the review guidelines in CLAUDE.md.
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: "--max-turns 5"
 ```
@@ -146,6 +157,11 @@ jobs:
 
       - uses: anthropics/claude-code-action@v1
         with:
+          prompt: |
+            Review the ENTIRE codebase, not just the PR diff. This PR
+            represents a trainee's complete project submission. Read and
+            evaluate all source files in src/, tests/, and data/. Follow
+            the review guidelines in CLAUDE.md.
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: "--max-turns 5"
 ```
