@@ -110,4 +110,14 @@ When reviewing a trainee's submission, evaluate against these criteria:
 ### Important
 - The assignment explicitly forbids AI-generated code. Flag any code that appears suspiciously sophisticated, overly templated, or inconsistent with the trainee's apparent skill level.
 - Focus feedback on helping trainees learn. Be specific about what to improve and why.
-- Ignore `claude-code-pr-review-setup.md` if present — it is an internal setup document, not part of any trainee submission.
+- Ignore `claude-code-pr-review-setup.md` and `e2e-test-harness-plan.md` if present — these are internal setup documents, not part of any trainee submission.
+
+## Running E2E Tests
+
+When asked to "run the e2e tests for <name>" or "test <name>'s code", do the following:
+
+1. Install the trainee's dependencies: `cd trainees/<name>` (or their nested project subfolder), run `npm install`, then `cd` back to the repo root.
+2. Run: `PROJECT_DIR=./trainees/<name> npm run test:e2e`
+3. Report the results — how many passed, how many failed, and which commands failed.
+
+The tests use ESM loader hooks to mock `prompt-sync` and `chalk`, so the trainee's code runs unmodified. Seed data with known IDs is injected before each test and restored after.

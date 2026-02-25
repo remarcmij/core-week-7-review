@@ -43,6 +43,24 @@ review alice's code
 
 Claude will find their folder under `trainees/`, use the review criteria in `CLAUDE.md`, and write a `REVIEW.md` in the trainee's folder.
 
-### 3. Read and verify the review
+### 3. Run the E2E tests
+
+Before or after the review, run the automated tests against the trainee's CLI:
+
+```
+run the e2e tests for alice
+```
+
+Claude will install dependencies if needed and run the test suite. The tests cover all commands from `COMMAND_SPEC.md` — ADD, GET, UPDATE, DELETE, GETALL for trainees, and ADD, GET, UPDATE, DELETE, JOIN, LEAVE, GETALL for courses.
+
+You can also run the tests directly from the terminal:
+
+```sh
+cd trainees/alice && npm install
+cd ../..
+PROJECT_DIR=./trainees/alice npm run test:e2e
+```
+
+### 4. Read and verify the review
 
 **You are responsible for the final review, not Claude.** Read the generated `REVIEW.md`, verify that the feedback is accurate and fair, and edit as needed before sending it to the trainee.
