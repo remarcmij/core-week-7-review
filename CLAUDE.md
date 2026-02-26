@@ -97,9 +97,10 @@ When reviewing a trainee's submission, evaluate against these criteria:
 - Are commit messages meaningful?
 - Was code pushed to `main` only via PR merges?
 
-### Testing
-- Are pure functions tested (parsing, validation, join/leave rules)?
-- Do tests cover both success and error cases?
+### Testing (on-demand only — do NOT include in standard reviews)
+- Testing is **not** evaluated as part of the written REVIEW.md.
+- The E2E test suite and any trainee unit tests can still be run on demand when explicitly requested (see "Running E2E Tests" below).
+- Only include test results in a review if the mentor specifically asks for it.
 
 ### Tone & Audience
 - The REVIEW.md will be sent directly to the trainee. Write in second person ("you", "your code") and address them by name.
