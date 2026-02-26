@@ -136,10 +136,9 @@ The assignment explicitly forbids AI-generated code. This is a **mandatory** par
 - **No evidence of mistakes or corrections** — real development involves trial-and-error; a clean history with no fix-up commits is suspicious.
 
 #### How to report AI suspicion
-- If you find strong signals, include a dedicated **"AI Usage Concern"** section in the review.
-- Be specific: cite exact code snippets, patterns, or git history evidence.
 - Rate the concern level: **low** (a few signals, could be a strong student), **medium** (multiple signals across files), or **high** (overwhelming evidence).
-- Do not accuse — state observations factually: "This code shows several patterns commonly associated with AI generation" rather than "You used ChatGPT."
+- **Low concern:** Do NOT include an AI section in the REVIEW.md. Instead, mention the assessment and reasoning in the conversation with the mentor only.
+- **Medium or high concern:** Include a dedicated **"AI Usage Concern"** section in the REVIEW.md. Be specific: cite exact code snippets, patterns, or git history evidence. Do not accuse — state observations factually: "This code shows several patterns commonly associated with AI generation" rather than "You used ChatGPT."
 - Still provide the full technical review regardless of AI suspicion — the feedback is valuable either way.
 
 ### Important
